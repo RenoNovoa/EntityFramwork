@@ -1,0 +1,25 @@
+﻿@model Lab22MoviePractice.Models.MovieModel
+
+@{
+    ViewData["Title"] = "RegisterMovieList";
+}
+
+<h1>Register Movie</h1>
+
+<form asp-action="RegisterMovieDetails" method="post" asp-controller="Moviepractice">
+    <label asp-for="Title"></label>
+    <input asp-for="Title" />
+
+    <label asp-for="Genre"></label>
+    @Html.DropDownListFor(model => model.Genre, new SelectList(Enum.GetValues(typeof(Genre))), "Select Genre")
+
+    <label asp-for="Year"></label>
+    <input asp-for="Year" />
+
+    <label asp-for="Actors"></label>
+    <input asp-for="Actors" />
+
+    <label asp-for="Directors"></label>
+    <input asp-for="Directors" />
+    <input class="btn btn-primary" type="submit" value="Submit Movie" />
+</form>
