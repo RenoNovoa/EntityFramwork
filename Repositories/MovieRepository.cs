@@ -47,11 +47,10 @@ namespace Lab22MoviePractice.Repositories
             return await _context.Movies.FirstOrDefaultAsync(_ => _.ID == id);
         }
 
-        public async Task UpdateAsync(MovieModel movie)
+        public async Task UpdateAsync(int id, MovieModel movie)
         {
-            var foundMovie = await GetMovieByIdAsync(movie.ID);
+            var foundMovie = await GetMovieByIdAsync(id);
 
-            foundMovie = movie;
 
             _context.Update(foundMovie);
             await _context.SaveChangesAsync();

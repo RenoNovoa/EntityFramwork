@@ -1,9 +1,6 @@
 ﻿using Lab22MoviePractice.Models;
 using Lab22MoviePractice.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Lab22MoviePractice.Controllers
@@ -25,11 +22,22 @@ namespace Lab22MoviePractice.Controllers
         }
 
         public IActionResult RegisterMovie()
-        {         
+        {
             return View();
         }
 
-        public  async Task<IActionResult> Delete([FromRoute]int id) // you add the atrubute FromRoute
+        public async Task<IActionResult> RegisterMovieDetails(MovieModel moviepracticeModel)
+        {
+            if (ModelState.IsValid) // Validation properties using atributes asigned to the properties
+            {
+                await _repository.CreateAsync(moviepracticeModel);
+                return View("Details", moviepracticeModel);
+            }
+
+            return View("RegisterMovie", moviepracticeModel);
+        }
+
+        public async Task<IActionResult> Delete([FromRoute] int id) // you add the atrubute FromRoute
         {
             await _repository.DeleteAsync(id);
             return RedirectToAction("Index"); //nameof(Index)
@@ -38,21 +46,36 @@ namespace Lab22MoviePractice.Controllers
         public async Task<IActionResult> Details([FromRoute] int id) // you add the atrubute FromRoute
         {
             var movie = await _repository.GetMovieByIdAsync(id);
-            return RedirectToAction(nameof(RegisterMovieDetails), movie);
+            return View(movie);
             //await _repository.DeleteAsync(id);
             //return RedirectToAction("Index"); //nameof(Index)
         }
 
-        public async Task<IActionResult> RegisterMovieDetails(MovieModel moviepracticeModel)
+        public async Task<IActionResult> EditMovie([FromRoute] int? id)
         {
-            if (ModelState.IsValid) // Validation properties using atributes asigned to the properties
+            if (id is null)
             {
-                await _repository.CreateAsync(moviepracticeModel);
-                return View(moviepracticeModel);
+                return RedirectToAction(nameof(Index));
             }
 
-            return View("RegisterMovie", moviepracticeModel);
+            var foundMovie = await _repository.GetMovieByIdAsync((int)id);
+
+            return View(foundMovie);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> EditMovie([FromRoute] int? id, [Bind("Title,Genre,Year,Actors,Directors")] MovieModel movie)
+        w{
+            if (id is null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            await _repository.UpdateAsync((int)id, movie);
+
+            return View("Details", await _repository.GetMovieByIdAsync((int)id));
+        }
+
 
         //public  IActionResult SearchResultGenre(Genre Genre)
         //{

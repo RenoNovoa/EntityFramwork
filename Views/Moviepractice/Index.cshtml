@@ -50,13 +50,14 @@
                 @Html.DisplayFor(modelItem => item.Directors)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @*@Html.ActionLink("Details", "Details", new { id = item.ID }) |*@
-                @*@Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                @Html.ActionLink("Edit", "EditMovie", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                <a asp-controller="Moviepractice" asp-action="EditMovie" asp-route-id="@item.ID">Edit The Real Way!!</a>
+                @*asp-route-ParameterName="@Value"*@
 
-                                                 
-                <a href="@Url.Action("Details", "Moviepractice", new {id = item.ID })">Details</a>
-                <a href="@Url.Action("Delete", "Moviepractice", new {id = item.ID })">Delete</a>
+                @*<a href="@Url.Action("Details", "Moviepractice", new {id = item.ID })">Details</a>
+        <a href="@Url.Action("Delete", "Moviepractice", new {id = item.ID })">Delete</a>*@
             </td>
         </tr>
 }

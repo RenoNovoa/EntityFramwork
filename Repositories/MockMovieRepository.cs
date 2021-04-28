@@ -45,7 +45,7 @@ namespace Lab22MoviePractice.Repositories
             throw new NotImplementedException();
         }
 
-        public Task UpdateAsync(MovieModel movie)
+        public Task UpdateAsync(int id, MovieModel movie)
         {
             throw new NotImplementedException();
         }

@@ -119,6 +119,7 @@ C:\Users\djnov\source\repos\Lab22MoviePractice\bin\Debug\netcoreapp3.1\runtimes\
 C:\Users\djnov\source\repos\Lab22MoviePractice\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\djnov\source\repos\Lab22MoviePractice\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\djnov\source\repos\Lab22MoviePractice\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Lab22MoviePractice.csprojAssemblyReference.cache
 C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Lab22MoviePractice.AssemblyInfoInputs.cache
 C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Lab22MoviePractice.AssemblyInfo.cs
 C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Lab22MoviePractice.csproj.CoreCompileInputs.cache
@@ -134,9 +135,10 @@ C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Lab22Movi
 C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs
 C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Razor\Views\Moviepractice\Details.cshtml.g.cs
+C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Razor\Views\Moviepractice\EditMovie.cshtml.g.cs
 C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Razor\Views\Moviepractice\Index.cshtml.g.cs
 C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Razor\Views\Moviepractice\RegisterMovie.cshtml.g.cs
-C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Razor\Views\Moviepractice\RegisterMovieDetails.cshtml.g.cs
 C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Razor\Views\Moviepractice\Search.cshtml.g.cs
 C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Razor\Views\Moviepractice\SearchResultGenre.cshtml.g.cs
 C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Razor\Views\Moviepractice\SearchResultTitle.cshtml.g.cs
@@ -152,4 +154,3 @@ C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Lab22Movi
 C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Lab22MoviePractice.dll
 C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Lab22MoviePractice.pdb
 C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Lab22MoviePractice.genruntimeconfig.cache
-C:\Users\djnov\source\repos\Lab22MoviePractice\obj\Debug\netcoreapp3.1\Lab22MoviePractice.csprojAssemblyReference.cache

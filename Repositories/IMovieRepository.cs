@@ -11,6 +11,6 @@ namespace Lab22MoviePractice.Repositories
         Task<bool> ExistsAsync(int id);
         Task<List<MovieModel>> GetAllMoviesAsync();
         Task<MovieModel> GetMovieByIdAsync(int id);
-        Task UpdateAsync(MovieModel movie);
+        Task UpdateAsync(int id, MovieModel movie);
     }
 }
